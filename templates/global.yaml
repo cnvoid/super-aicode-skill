@@ -1,0 +1,84 @@
+# ~/.super.yaml — 全局基线配置，所有项目生效
+# 复制此文件到用户主目录 ~/.super.yaml
+#
+# 工作机制：
+#   加载顺序：profiles/<profile>.yaml → ~/.super.yaml → ./.super.yaml
+#   后者覆盖前者。只需写你要改的项，不写的项继承 profile 默认值。
+#
+# 使用方式：
+#   1. 选择 profile（默认 balanced）
+#   2. 取消注释并修改你要覆盖的规则
+#   3. 重启 opencode
+
+version: "1"
+profile: balanced
+
+# ============================================================
+# 全局规则覆盖（按需取消注释）
+# ============================================================
+# rules:
+#   exception: error        # 异常处理
+#   validation: error       # 入参校验
+#   response: error         # 统一响应
+#   naming: error           # 命名规范
+#   api-design: error       # API 设计
+#   config: error           # 配置管理
+#   health: error           # 健康检查
+#   backend-security: error # 后端安全
+#   resilience: warn        # 容错容灾
+#   logging: warn           # 结构化日志
+#   observability: warn     # 可观测性(指标/告警/追踪)
+#   legacy: error           # 存量项目：尊重旧风格/限定修改范围
+#   doc: off                # 文档注释
+
+# ============================================================
+# 场景开关与规则覆盖（按需取消注释）
+# ============================================================
+# scenarios:
+#   frontend:
+#     enabled: true
+#     rules: {}
+#
+#   backend-java:
+#     enabled: true
+#     rules: {}
+#
+#   backend-node:
+#     enabled: true
+#     rules: {}
+#
+#   backend-go:
+#     enabled: true
+#     rules: {}
+#   backend-python:
+#     enabled: true
+#     rules: {}
+#   design-icon:
+#     enabled: true
+#     rules: {}
+#
+#   backend-common:
+#     enabled: true
+#     rules: {}
+#
+#   deploy:
+#     enabled: true
+#     rules: {}
+#
+#   sse:
+#     enabled: true
+#     rules: {}
+#   config:
+#     enabled: true
+#     rules: {}
+#   api-doc:
+#     enabled: true
+#     rules: {}
+#   log:
+#     enabled: true
+#     worklog_file: WORKLOG.md
+#     rules: {}
+#   testing:
+#     enabled: true
+#     coverage: 80
+#     rules: {}

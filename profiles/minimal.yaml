@@ -1,0 +1,120 @@
+version: "1"
+description: 最小策略，遗留系统改造/快速原型使用
+
+rules:
+  exception: error
+  validation: error
+  response: error
+  naming: warn
+  api-design: off
+  config: warn
+  health: error
+  backend-security: error
+  resilience: off
+  logging: off
+  observability: off
+  legacy: error
+  doc: off
+
+scenarios:
+  frontend:
+    enabled: true
+    rules:
+      react: warn
+      vue: warn
+      typescript: warn
+      css: off
+      http: error
+      component: warn
+      state: off
+      router: warn
+      form: off
+      build: off
+      security: error
+
+  backend-java:
+    enabled: true
+    rules:
+      layering: warn
+      exception: error
+      jpa: off
+      bean: off
+
+  backend-node:
+    enabled: true
+    rules:
+      express: warn
+      nestjs: warn
+      prisma: off
+
+  backend-go:
+    enabled: true
+    rules:
+      layering: warn
+      error-handling: error
+      concurrency: off
+
+  backend-python:
+    enabled: true
+    rules:
+      fastapi: warn
+      pydantic: warn
+      sqlalchemy: off
+      layering: warn
+
+  design-icon:
+    enabled: true
+    rules:
+      component: warn
+      system: off
+      accessibility: warn
+
+  backend-common:
+    enabled: true
+    rules:
+      auth: error
+      cache: off
+      database: warn
+      digital-worker: off
+
+  deploy:
+    enabled: false
+    rules:
+      ci-cd: off
+      docker: off
+
+  sse:
+    enabled: false
+    rules:
+      sse-client: off
+      sse-server: off
+
+  config:
+    enabled: true
+    rules:
+      central: warn
+      env-gate: warn
+
+  log:
+    enabled: true
+    worklog_file: WORKLOG.md
+    rules:
+      worklog: off
+      report: off
+
+  api-doc:
+    enabled: true
+    rules:
+      openapi: warn
+      sync: warn
+
+  testing:
+    enabled: true
+    coverage: 50
+    rules:
+      unit: warn
+      api: warn
+      ui: off
+      integration: off
+      ai-testing: off
+      report: off

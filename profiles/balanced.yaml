@@ -1,0 +1,120 @@
+version: "1"
+description: 推荐默认策略，适用大部分项目
+
+rules:
+  exception: error
+  validation: error
+  response: error
+  naming: error
+  api-design: error
+  config: error
+  health: error
+  backend-security: error
+  resilience: warn
+  logging: warn
+  observability: warn
+  legacy: error
+  doc: off
+
+scenarios:
+  frontend:
+    enabled: true
+    rules:
+      react: error
+      vue: error
+      typescript: error
+      css: warn
+      http: error
+      component: error
+      state: warn
+      router: error
+      form: warn
+      build: warn
+      security: error
+
+  backend-java:
+    enabled: true
+    rules:
+      layering: error
+      exception: error
+      jpa: error
+      bean: warn
+
+  backend-node:
+    enabled: true
+    rules:
+      express: error
+      nestjs: error
+      prisma: warn
+
+  backend-go:
+    enabled: true
+    rules:
+      layering: error
+      error-handling: error
+      concurrency: warn
+
+  backend-python:
+    enabled: true
+    rules:
+      fastapi: error
+      pydantic: error
+      sqlalchemy: error
+      layering: error
+
+  design-icon:
+    enabled: true
+    rules:
+      component: error
+      system: warn
+      accessibility: error
+
+  backend-common:
+    enabled: true
+    rules:
+      auth: error
+      cache: warn
+      database: error
+      digital-worker: warn
+
+  deploy:
+    enabled: true
+    rules:
+      ci-cd: warn
+      docker: warn
+
+  sse:
+    enabled: true
+    rules:
+      sse-client: error
+      sse-server: error
+
+  config:
+    enabled: true
+    rules:
+      central: error
+      env-gate: error
+
+  log:
+    enabled: true
+    worklog_file: WORKLOG.md
+    rules:
+      worklog: warn
+      report: warn
+
+  api-doc:
+    enabled: true
+    rules:
+      openapi: error
+      sync: error
+
+  testing:
+    enabled: true
+    coverage: 80
+    rules:
+      unit: error
+      api: error
+      ui: warn
+      integration: warn
+      ai-testing: warn
+      report: warn

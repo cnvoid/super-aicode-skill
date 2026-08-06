@@ -1,0 +1,114 @@
+version: "1"
+description: 严格策略，核心系统/金融/安全场景使用
+
+rules:
+  exception: error
+  validation: error
+  response: error
+  naming: error
+  api-design: error
+  config: error
+  health: error
+  backend-security: error
+  resilience: error
+  logging: error
+  observability: error
+  legacy: error
+  doc: error
+
+scenarios:
+  frontend:
+    enabled: true
+    rules:
+      react: error
+      vue: error
+      typescript: error
+      css: error
+      http: error
+      component: error
+      state: error
+      router: error
+      form: error
+      build: error
+      security: error
+
+  backend-java:
+    enabled: true
+    rules:
+      layering: error
+      exception: error
+      jpa: error
+      bean: error
+
+  backend-node:
+    enabled: true
+    rules:
+      express: error
+      nestjs: error
+      prisma: error
+
+  backend-go:
+    enabled: true
+    rules:
+      layering: error
+      error-handling: error
+      concurrency: error
+
+  backend-python:
+    enabled: true
+    rules:
+      fastapi: error
+      pydantic: error
+      sqlalchemy: error
+      layering: error
+
+  design-icon:
+    enabled: true
+    rules:
+      component: error
+      system: error
+      accessibility: error
+
+  backend-common:
+    enabled: true
+    rules:
+      auth: error
+      cache: error
+      database: error
+      digital-worker: error
+
+  deploy:
+    enabled: true
+    rules:
+      ci-cd: error
+      docker: error
+
+  config:
+    enabled: true
+    rules:
+      central: error
+      env-gate: error
+
+  log:
+    enabled: true
+    worklog_file: WORKLOG.md
+    rules:
+      worklog: error
+      report: error
+
+  api-doc:
+    enabled: true
+    rules:
+      openapi: error
+      sync: error
+
+  testing:
+    enabled: true
+    coverage: 90
+    rules:
+      unit: error
+      api: error
+      ui: error
+      integration: error
+      ai-testing: error
+      report: error

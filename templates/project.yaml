@@ -1,0 +1,97 @@
+# ./.super.yaml — 项目级配置，覆盖全局基线
+# 复制此文件到项目根目录并重命名为 .super.yaml
+# 修改以下配置以匹配团队规范
+
+version: "1"
+
+# 项目覆盖全局规则
+rules:
+  # 例：本项目强制要求文档
+  # doc: error
+
+scenarios:
+  # 例：本项目是前端项目
+  frontend:
+    enabled: true
+    rules:
+      # 例：本项目要求 React + TypeScript 严格模式
+      # react: error
+      # typescript: error
+
+  # 例：本项目使用 Spring Boot, 关闭其他后端
+  backend-java:
+    enabled: true
+    rules:
+      jpa: error
+
+  backend-node:
+    enabled: false
+
+  backend-go:
+    enabled: false
+
+  backend-python:
+    enabled: true
+    rules:
+      # 例：本项目使用 FastAPI
+      # fastapi: error
+      # 例：本项目要求严格数据校验
+      # pydantic: error
+
+  design-icon:
+    enabled: true
+    rules:
+      # 例：本项目严格要求图标无障碍
+      # accessibility: error
+
+  backend-common:
+    enabled: true
+    rules:
+      # 例：本项目需要缓存规范
+      # cache: error
+      # 例：本项目面向数字员工接入
+      # digital-worker: error
+
+  deploy:
+    enabled: true
+    rules:
+      # 例：本项目需严格 Docker 规范
+      # docker: error
+
+  sse:
+    enabled: true
+    rules:
+      # 例：本项目严格要求 SSE 连接管理
+      # sse-client: error
+      # sse-server: error
+
+  config:
+    enabled: true
+    rules:
+      # 例：本项目要求严格集中配置
+      # central: error
+      # 例：本项目禁止业务代码直读环境变量
+      # env-gate: error
+
+  api-doc:
+    enabled: true
+    rules:
+      # 例：本项目严格要求 API 中文注解
+      # openapi: error
+      # 例：本项目要求注解与代码同步
+      # sync: error
+
+  log:
+    enabled: true
+    worklog_file: WORKLOG.md
+    rules:
+      # 例：本项目严格要求工作记录
+      # worklog: error
+      # 例：本项目需要周期报告
+      # report: error
+
+  testing:
+    coverage: 85
+    rules:
+      # 例：本项目要求 UI 测试
+      # ui: error
