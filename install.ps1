@@ -66,7 +66,7 @@ $skillDirs = @(
     "super-backend-java", "super-backend-node", "super-backend-go", "super-backend-python",
     "super-backend-common",
     "super-design-icon", "super-deploy", "super-config",
-    "super-api-doc", "super-test", "super-log", "super-sse"
+    "super-api-doc", "super-test", "super-log", "super-sse", "super-mock-data"
 )
 foreach ($dir in $skillDirs) {
     $src = Join-Path $ScriptDir $dir

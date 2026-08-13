@@ -86,7 +86,7 @@ fi
 
 # 复制技能文件
 echo "复制技能文件..."
-for dir in super-core super-frontend super-backend-{java,node,go,python,common} super-design-icon super-deploy super-config super-api-doc super-test super-log super-sse; do
+for dir in super-core super-frontend super-backend-{java,node,go,python,common} super-design-icon super-deploy super-config super-api-doc super-test super-log super-sse super-mock-data; do
     if [[ -d "$SCRIPT_DIR/$dir" ]]; then
         cp -r "$SCRIPT_DIR/$dir" "$SKILL_DIR/"
         echo "  ✓ $dir"

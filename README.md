@@ -96,6 +96,11 @@ super-test (触发词: test, unit test, mock, coverage, api test, UI test, a11y,
 super-log (触发词: log, worklog, 周报, 月报, 工作总结, daily report, 日报, summary)
   ├── prompts/worklog.md         任务记录: 格式/分类/粒度/自动触发
   └── prompts/report.md          总结报告: 周报模板/月报模板/数据汇总/趋势分析
+
+super-mock-data (触发词: mock data, 造数据, 测试数据, seed, fixture, faker, 假数据, 关联数据)
+  ├── prompts/generation.md      测试数据生成: 业务语义仿真、faker 工具、边界与反例、脱敏
+  ├── prompts/association.md     关联正确性: 外键真实关联、依赖拓扑顺序、字典先插、复用主数据
+  └── prompts/seed.md            落库脚本: 幂等可重复、仅测试/开发库、Seed 工具管理、数据量控制
 ```
 
 ## 快速开始
@@ -190,6 +195,7 @@ super-aicode-skill/
 ├── super-api-doc/            # API 文档注解场景技能
 ├── super-test/               # 测试场景技能
 ├── super-log/                # 日志与报告场景技能
+├── super-mock-data/          # 测试数据造数场景技能
 ├── install.sh                # Linux/macOS 一键安装
 ├── install.ps1               # Windows 一键安装
 ├── INSTALL.md                # 详细安装文档

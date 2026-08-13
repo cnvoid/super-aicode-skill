@@ -108,6 +108,13 @@ scenarios:
       openapi: error
       sync: error
 
+  mock-data:
+    enabled: true
+    rules:
+      generation: warn
+      association: error
+      seed: error
+
   testing:
     enabled: true
     coverage: 80

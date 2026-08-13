@@ -78,6 +78,9 @@ profile: balanced
 #     enabled: true
 #     worklog_file: WORKLOG.md
 #     rules: {}
+#   mock-data:
+#     enabled: true
+#     rules: {}
 #   testing:
 #     enabled: true
 #     coverage: 80

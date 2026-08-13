@@ -179,9 +179,12 @@ cp templates/project.yaml ./.super.yaml
 ├── super-log/
 │   ├── SKILL.md
 │   └── prompts/ (2 个)
-└── super-sse/
+├── super-sse/
+│   ├── SKILL.md
+│   └── prompts/ (2 个)
+└── super-mock-data/
     ├── SKILL.md
-    └── prompts/ (2 个)
+    └── prompts/ (3 个)
 ```
 
 ---

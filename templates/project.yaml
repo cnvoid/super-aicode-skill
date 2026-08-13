@@ -90,6 +90,14 @@ scenarios:
       # 例：本项目需要周期报告
       # report: error
 
+  mock-data:
+    enabled: true
+    rules:
+      # 例：本项目要求测试数据关联正确
+      # association: error
+      # 例：本项目要求造数脚本仅写测试库
+      # seed: error
+
   testing:
     coverage: 85
     rules:
